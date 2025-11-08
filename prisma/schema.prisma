@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = "file:./dev.db"
 }
 
 model Product {
@@ -12,7 +12,8 @@ model Product {
   title       String
   slug        String   @unique
   description String?
-  price       Int      // stored in cents (i.e., 19900 = $199.00)
+  price       Int
   image       String?
+  category    String?
   createdAt   DateTime @default(now())
 }

@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div className="p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {data?.map((product) => (
-        <Link href={`/product/${product.slug}`} key={product.id}>
+        <Link href={`/products/${product.slug}`} key={product.id}>
           <div className="border p-4 rounded shadow hover:shadow-lg transition cursor-pointer">
             <img
               src={product.image}
